@@ -453,7 +453,7 @@ podman build -t bluefin-test:latest .
 
 # Build with specific arguments
 podman build \
-  --build-arg FEDORA_MAJOR_VERSION=42 \
+  --build-arg FEDORA_MAJOR_VERSION=44 \
   --build-arg IMAGE_NAME=bluefin \
   -t bluefin-test:latest \
   .
@@ -465,7 +465,7 @@ podman build \
 # Test a specific build script
 podman run --rm -it \
   -v "$(pwd)/build_files:/build_files:ro" \
-  ghcr.io/ublue-os/silverblue-main:42 \
+  ghcr.io/ublue-os/silverblue-main:44 \
   bash /build_files/base/04-packages.sh
 ```
 
@@ -950,7 +950,7 @@ Discord: "Hey, package X is failing to install"
   ↓ (quick back-and-forth debugging)
   ↓ (copy findings to text editor)
   ↓
-GitHub Issue: "Package X fails on Fedora 42 due to Y dependency"
+GitHub Issue: "Package X fails on Fedora 44 due to Y dependency"
   - Symptoms
   - Root cause
   - Solution
@@ -1032,8 +1032,8 @@ bash -x build_files/base/04-packages.sh
 # Container execution (more realistic)
 podman run --rm -it \
   -v "$(pwd):/workspace:ro" \
-  -e FEDORA_MAJOR_VERSION=42 \
-  ghcr.io/ublue-os/silverblue-main:42 \
+  -e FEDORA_MAJOR_VERSION=44 \
+  ghcr.io/ublue-os/silverblue-main:44 \
   bash /workspace/build_files/base/04-packages.sh
 ```
 
