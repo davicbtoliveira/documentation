@@ -1043,7 +1043,7 @@ podman run --rm -it \
 
 Bluefin uses continuous delivery:
 - **Daily builds**: Automatic, no manual release
-- **Version format**: `42.20251012.1` (Fedora.YYYYMMDD.build)
+- **Version format**: `F44.20260512` (F{FedoraVersion}.{YYYYMMDD})
 - **Multiple builds per day**: Various channels updated independently
 
 ### Release Channels
